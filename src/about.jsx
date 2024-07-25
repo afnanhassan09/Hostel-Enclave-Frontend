@@ -4,19 +4,33 @@ import MenuBar from './Helpers/menu';
 
 const About = () => {
   return (
-    <div>
+    <div className="bg-gray-50 min-h-screen">
       <MenuBar />
-      <div className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold mb-4">About Us</h1>
-        <p className="text-lg mb-4">
-          Welcome to Hostel Enclave! We are dedicated to providing comfortable and affordable accommodation options for travelers. Our hostels are located in prime areas, making it easy for you to explore and enjoy your stay.
-        </p>
-        <p className="text-lg mb-4">
-          Our mission is to ensure that every guest has a memorable and enjoyable experience. We offer a range of amenities and services to make your stay as pleasant as possible. Whether you're traveling for business or leisure, we've got you covered.
-        </p>
-        <p className="text-lg">
-          Thank you for choosing Hostel Enclave. We look forward to welcoming you and making your stay unforgettable.
-        </p>
+      <div className="container mx-auto p-8">
+        <h1 className="text-5xl font-extrabold text-center text-gray-800 mb-8">About Us</h1>
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          <p className="text-lg text-gray-700 mb-6">
+            Welcome to Hostel Enclave! When we were freshmen at FAST University, we faced a significant challenge: finding suitable accommodation. Since our university doesn't provide hostels, we quickly realized that many students at FAST University struggle with the same issue. Motivated by this common problem, we decided to take action.
+          </p>
+          <p className="text-lg text-gray-700 mb-6">
+            Now, in our fourth semester, we've developed a web app specifically designed to help students like us find the perfect hostel. Our platform simplifies the search process, providing a curated list of hostels that meet the needs and preferences of university students.
+          </p>
+          <p className="text-lg text-gray-700 mb-6">
+            Our mission is to create a seamless and efficient way for students to find safe, comfortable, and affordable hostels. We aim to build a trusted community where students can share their experiences and find accommodations that make their university life more enjoyable.
+          </p>
+          <p className="text-lg text-gray-700 mb-6">
+            Are you a hostel owner looking to list your property on our platform? We'd love to hear from you! By joining our community, you'll connect with a vast network of students in search of the perfect place to call home.
+          </p>
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
+            <p className="text-lg text-gray-700">
+              <strong>Email:</strong> <a href="mailto:hello.ghausmalik@gmail.com" className="text-blue-500 hover:underline">hello.ghausmalik@gmail.com</a>
+            </p>
+            <p className="text-lg text-gray-700">
+              <strong>Phone:</strong> <a href="tel:03464880929" className="text-blue-500 hover:underline">+92 346 4880929</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
