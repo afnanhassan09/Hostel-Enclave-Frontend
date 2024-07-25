@@ -1,13 +1,14 @@
-// components/HostelCard.js
 import React from 'react';
-
 
 const HostelCard = ({ hostel }) => {
   console.log(hostel);
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg my-4 drop-shadow-2xl ">
-      
-      <img className="w-full" src={hostel.images[0]} alt="Hostel" />
+      <img
+        className="w-full h-48 object-cover"
+        src={hostel.images[0]}
+        alt="Hostel"
+      />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{hostel.hostelName}</div>
         <p className="text-gray-700 text-base">{hostel.hostelAddress}</p>
@@ -23,12 +24,11 @@ const HostelCard = ({ hostel }) => {
           <li>{hostel.AirCooler ? '✔️ air cooler available' : '❌ air cooler not available'}</li>
           <li>{hostel.Laundry ? '✔️ washing machine available' : '❌ washing machine not available'}</li>
         </ul>
-      </div> 
+      </div>
       <div className="px-6 pt-4 pb-2 flex justify-center items-center">
-        <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-2xl"  
-        onClick={() => window.location.href = `/hostels/${hostel._id}`
-        }
-        
+        <button
+          className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-2xl"
+          onClick={() => window.location.href = `/hostels/${hostel._id}`}
         >
           View Hostel
         </button>
