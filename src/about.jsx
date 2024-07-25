@@ -24,10 +24,7 @@ const About = () => {
           <div className="text-center">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
             <p className="text-lg text-gray-700">
-              <strong>Email:</strong> <a href="mailto:hello.ghausmalik@gmail.com" className="text-blue-500 hover:underline">hello.ghausmalik@gmail.com</a>
-            </p>
-            <p className="text-lg text-gray-700">
-              <strong>Phone:</strong> <a href="tel:03464880929" className="text-blue-500 hover:underline">+92 346 4880929</a>
+              <strong>Email:</strong> <a href="mailto:hostelenclave@gmail.com" className="text-blue-500 hover:underline">hostelenclave@gmail.com</a>
             </p>
           </div>
         </div>
