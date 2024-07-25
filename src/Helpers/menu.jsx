@@ -20,11 +20,11 @@ const MenuBar = () => {
             <FaBars />
           </button>
         </div>
-        <div className={`md:flex ${isOpen ? 'block' : 'hidden'} space-x-4`}>
-          <Link to="/hostels" className="text-gray-300 hover:text-white block md:inline-block">
-           Hostels
+        <div className={`md:flex ${isOpen ? 'block' : 'hidden'} `}>
+          <Link to="/hostels" className="text-gray-300 hover:text-white block md:inline-block px-4 py-2 border border-gray-300 rounded">
+            Hostels
           </Link>
-          <Link to="/about" className="text-gray-300 hover:text-white block md:inline-block">
+          <Link to="/about" className="text-gray-300 hover:text-white block md:inline-block px-4 py-2 border border-gray-300 rounded">
             About Us
           </Link>
         </div>
