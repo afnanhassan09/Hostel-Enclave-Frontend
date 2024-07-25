@@ -7,7 +7,7 @@ const HostelCard = ({ hostel }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg my-4 drop-shadow-2xl ">
       
-      <img className="w-full" src="https://www.shutterstock.com/image-photo/dark-bedroom-light-window-600nw-623484941.jpg" alt="Hostel" />
+      <img className="w-full" src={hostel.images[0]} alt="Hostel" />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{hostel.hostelName}</div>
         <p className="text-gray-700 text-base">{hostel.hostelAddress}</p>
