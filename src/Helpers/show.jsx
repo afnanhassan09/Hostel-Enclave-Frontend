@@ -3,9 +3,9 @@ import React from 'react';
 const HostelCard = ({ hostel }) => {
   console.log(hostel);
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg my-4 drop-shadow-2xl ">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg my-4 drop-shadow-2xl">
       <img
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover square-img"
         src={hostel.images[0]}
         alt="Hostel"
       />
