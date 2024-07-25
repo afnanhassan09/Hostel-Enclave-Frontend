@@ -3,7 +3,7 @@ import React from 'react';
 const HostelCard = ({ hostel }) => {
   console.log(hostel);
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg my-4 drop-shadow-2xl">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg my-4 drop-shadow-2xl cursor-pointer" onClick={() => window.location.href = `/hostels/${hostel._id}`}>
       <img
         className="w-full h-48 object-cover square-img"
         src={hostel.images[0]}
@@ -26,12 +26,7 @@ const HostelCard = ({ hostel }) => {
         </ul>
       </div>
       <div className="px-6 pt-4 pb-2 flex justify-center items-center">
-        <button
-          className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-2xl"
-          onClick={() => window.location.href = `/hostels/${hostel._id}`}
-        >
-          View Hostel
-        </button>
+
       </div>
     </div>
   );
