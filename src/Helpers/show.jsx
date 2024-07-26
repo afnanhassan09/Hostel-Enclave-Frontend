@@ -22,7 +22,7 @@ const HostelCard = ({ hostel }) => {
           <li>{hostel.Geyser ? '✔️ geyser available' : '❌ geyser not available'}</li>
           <li>{hostel.AC ? '✔️ air conditioner available' : '❌ air conditioner not available'}</li>
           <li>{hostel.AirCooler ? '✔️ air cooler available' : '❌ air cooler not available'}</li>
-          <li>{hostel.Laundry ? '✔️ washing machine available' : '❌ washing machine not available'}</li>
+          <li>{hostel.Laundry ? '✔️ laundry available' : '❌ laundry not available'}</li>
         </ul>
       </div>
       <div className="px-6 pt-4 pb-2 flex justify-center items-center">
