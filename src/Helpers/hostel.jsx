@@ -8,6 +8,7 @@ const HostelDetail = () => {
   const [hostel, setHostel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isImageOpen, setIsImageOpen] = useState(false);
 
   useEffect(() => {
     const fetchHostelDetails = async () => {
@@ -30,7 +31,20 @@ const HostelDetail = () => {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + hostel.images.length) % hostel.images.length);
+    setCurrentImageIndex((prevIndex) =>
+      (prevIndex - 1 + hostel.images.length) % hostel.images.length
+    );
+  };
+
+  const openImageOpener = (index) => {
+    setCurrentImageIndex(index);
+    setIsImageOpen(true);
+  };
+
+  const closeImageOpener = (e) => {
+    if (e.target.id === 'imageOpenerBackdrop') {
+      setIsImageOpen(false);
+    }
   };
 
   if (loading) {
@@ -53,7 +67,8 @@ const HostelDetail = () => {
               <img
                 src={hostel.images[currentImageIndex]}
                 alt={hostel.hostelName}
-                className="w-full h-full object-cover rounded-lg shadow-md"
+                className="w-full h-full object-cover rounded-lg shadow-md cursor-pointer"
+                onClick={() => openImageOpener(currentImageIndex)}
               />
               <button
                 onClick={prevImage}
@@ -110,6 +125,35 @@ const HostelDetail = () => {
           </p>
         </div>
       </div>
+
+      {/* Image Opener Modal */}
+      {isImageOpen && (
+        <div
+          id="imageOpenerBackdrop"
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
+          onClick={closeImageOpener}
+        >
+          <div className="relative max-w-3xl w-full px-4">
+            <img
+              src={hostel.images[currentImageIndex]}
+              alt="Enlarged view"
+              className="w-full max-h-screen object-contain rounded-lg"
+            />
+            <button
+              onClick={prevImage}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-white bg-opacity-50 text-black rounded-full"
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-white bg-opacity-50 text-black rounded-full"
+            >
+              <FaArrowRight />
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
