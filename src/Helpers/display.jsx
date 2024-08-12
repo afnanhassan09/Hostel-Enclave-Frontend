@@ -55,7 +55,9 @@ const HostelDisplayPage = () => {
         <Filter onFilter={handleFilter} />
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {loading ? (
-            <p>Loading hostels...</p>
+            <div className="flex justify-center items-center w-full h-64">
+              <div className="spinner"></div>
+            </div>
           ) : (
             filteredHostels.length > 0 ? (
               filteredHostels.map((hostel, index) => (

@@ -48,7 +48,11 @@ const HostelDetail = () => {
   };
 
   if (loading) {
-    return <div>Loading hostel details...</div>;
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   if (!hostel) {
