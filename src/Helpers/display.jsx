@@ -55,7 +55,7 @@ const HostelDisplayPage = () => {
         <Filter onFilter={handleFilter} />
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {loading ? (
-            <div className="flex justify-center items-center w-full h-64">
+            <div className="spinner-container">
               <div className="spinner"></div>
             </div>
           ) : (
